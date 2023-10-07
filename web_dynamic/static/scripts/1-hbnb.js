@@ -1,16 +1,20 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+$(()=>{
     const selectedAmenities = [];
     $("input[type='checkbox']").change(function (e) { 
-        e.preventDefault();
+        e.preventDefault(); 
         const amenityId = $(this).attr('data-id');
+        const amenityName = $(this).attr('data-name');
         if ($(this).is(":checked")) {
-            selectedAmenities.push(amenityId);
+            selectedAmenities.push(amenityName);
         } else {
-            const index = selectedAmenities.indexOf(amenityId);
+            const index = selectedAmenities.indexOf(amenityName);
             if (index != -1) {
                 selectedAmenities.splice(index, 1);
             }
+            console.log(selectedAmenities);
         }
+        
+        $('.amenities h4').text(selectedAmenities.join(', '));
     });
-    $('.amenities h4').text(selectedAmenities);
+    
 });
