@@ -11,7 +11,6 @@ $(()=>{
             if (index != -1) {
                 selectedAmenities.splice(index, 1);
             }
-            console.log(selectedAmenities);
         }
         
         $('.amenities h4').text(selectedAmenities.join(', '));
