@@ -17,7 +17,7 @@ header .logo {
 
 #api_status {
     float: right;
-    border-radius: 40px;
+    border-radius: 50%;
     margin-right: 30px;
     height: 40px;
     width: 40px;
